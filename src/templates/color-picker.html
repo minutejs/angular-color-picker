@@ -1,0 +1,64 @@
+<div class="inline-block" ng-class="{dropup: dropup}">
+    <div class="dropdown">
+        <span class="form-control color-box" data-toggle="dropdown" title="Pick a color">
+            <span class="form-control color-box-inside" style="background-color: {{color}}">&nbsp;</span>
+                  &nbsp;<i class="fa fa-caret-down text-muted" id="color-picker-arrow"></i>
+        </span>
+        <ul class="dropdown-menu" id="colorMenu">
+            <li class="color-holder">
+                <div class="color-box-sm" style="background-color: #{{c}}" ng-repeat="c in colors" ng-click="setColor(c)">
+                    <i class="fa fa-check" style="position: absolute" ng-show="'#' + c === color"></i>
+                </div>
+
+                <input type="text" class="form-control color-text" ng-model="color" maxlength="7" placeholder="Color value" />
+            </li>
+        </ul>
+    </div>
+
+    <style>
+        .color-box {
+            width: 34px;
+            line-height: 32px;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .color-box-inside {
+            left: 1px;
+            top: 1px;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            padding: 0;
+        }
+
+        .color-box-sm {
+            width: 18px;
+            height: 18px;
+            border: 1px solid gray;
+            display: inline-block;
+            margin: 2px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .color-text {
+            margin-left: 2px;
+            width: 97%;
+        }
+
+        .color-holder {
+            padding-left: 2px;
+        }
+
+        #color-picker-arrow {
+            position: absolute;
+            bottom: 0;
+            right: 2px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</div>

@@ -1,0 +1,22 @@
+{
+  "name": "angular-color-picker",
+    "authors": [
+    "minutephp <dev@minutephp.com>"
+  ],
+  "description": "Dead simple color picker using AngularJS",
+  "main": "src/js/color-picker.js",
+  "keywords": [
+    "angularjs",
+    "color",
+    "picker"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.minutephp.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
